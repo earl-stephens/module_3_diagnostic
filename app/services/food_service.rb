@@ -11,9 +11,14 @@ class FoodService
     end
   end
 
-  def get_food_data
-    response = conn.get("/ndb/search/?format=json&q=#{@search_term}&api_key=#{ENV['gov_data_key']}&max=#{@limit}&sort=r")
+  def make_get_request(url)
+    response = conn.get(url)
     JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_food_data
+    url = "/ndb/search/?format=json&q=#{@search_term}&api_key=#{ENV['gov_data_key']}&max=#{@limit}&sort=r"
+    make_get_request(url)
   end
 
 end

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 08 Jul 2019 16:27:13 GMT
+      - Mon, 08 Jul 2019 16:42:14 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -33,7 +33,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '3600'
       X-Ratelimit-Remaining:
-      - '3170'
+      - '3071'
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -149,5 +149,5 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Mon, 08 Jul 2019 16:27:13 GMT
+  recorded_at: Mon, 08 Jul 2019 16:42:14 GMT
 recorded_with: VCR 5.0.0
