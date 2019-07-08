@@ -18,6 +18,8 @@ group :development, :test do
   gem 'awesome_print'
   gem 'figaro'
   gem 'launchy'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :test do
