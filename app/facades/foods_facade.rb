@@ -1,7 +1,8 @@
 class FoodsFacade
 
-  def initialize(search_terms)
+  def initialize(search_terms, limit)
     @search_term = search_terms
+    @limit = limit
   end
 
   def number_results
@@ -17,7 +18,7 @@ class FoodsFacade
   private
 
   def service
-    @_service ||= FoodService.new(@search_term)
+    @_service ||= FoodService.new(@search_term, @limit)
   end
 
   def service_results

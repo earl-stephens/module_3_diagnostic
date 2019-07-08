@@ -3,19 +3,19 @@
 <% facade.food_data.each do |food_item| %>
   <ul class="foods">
     <li class="ndb_number">
-      <%= food_item.ndb_number %>
+      NDB number: <%= food_item.ndb_number %>
     </li>
     <li class="name">
-      <%= food_item.name %>
+      Name: <%= food_item.name %>
     </li>
     <li class="food_group">
-      <%= food_item.food_group %>
+      Food group: <%= food_item.food_group %>
     </li>
     <li class="data_source">
-      <%= food_item.data_source %>
+      Data source: <%= food_item.data_source %>
     </li>
     <li class="manufacturer">
-      <%= food_item.manufacturer %>
+      Manufacturer: <%= food_item.manufacturer %>
     </li>
   </ul>
 <% end %>

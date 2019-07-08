@@ -1,9 +1,8 @@
 class FoodsController < ApplicationController
 
   def index
-    # binding.pry params[:q]
     render locals: {
-      facade: FoodsFacade.new(params[:q])
+      facade: FoodsFacade.new(params[:q], limit=10)
     }
   end
 

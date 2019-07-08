@@ -3,7 +3,8 @@ require "rails_helper"
 describe FoodService do
   it 'gets data' do
     search_term = 'sweet potatoes'
-    service = FoodService.new(search_term)
+    limit = 10
+    service = FoodService.new(search_term, limit)
 
     results = service.get_food_data
 

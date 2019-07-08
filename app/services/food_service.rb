@@ -1,7 +1,8 @@
 class FoodService
 
-  def initialize(search_terms)
+  def initialize(search_terms, limit)
     @search_term = search_terms
+    @limit = limit
   end
 
   def conn
@@ -10,8 +11,8 @@ class FoodService
     end
   end
 
-  def get_food_data(limit=10)
-    response = conn.get("/ndb/search/?format=json&q=#{@search_term}&api_key=#{ENV['gov_data_key']}&max=#{limit}")
+  def get_food_data
+    response = conn.get("/ndb/search/?format=json&q=#{@search_term}&api_key=#{ENV['gov_data_key']}&max=#{@limit}&sort=r")
     JSON.parse(response.body, symbolize_names: true)
   end
 
